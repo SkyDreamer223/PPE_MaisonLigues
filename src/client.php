@@ -1,45 +1,38 @@
 <?php
     require_once __DIR__.'/Database.php';
+  
 
     class Client {
+        
+        /**
+         *L'ID du client
+         *@var integer
+         */
+        
+         public $id_client;
         /**
          * Nom du client
          * @var string
          */
-        private $nom;
+        public $nom;
 
         /**
          * Prenom du client
          * @var string
          */
-        private $prenom;
+        public $prenom;
         /**
          * L'age du client
          * @var integer
          */
-        private $age;
+        public $age;
 
         /**
          * Mail du client
          * @var string
          */
-        private $email;
+        public $email;
 
-        /**
-         *L'ID du client
-         *@var integer
-         */
-        private $id;
-
-        
-
-        public function __construct($nom, $prenom, $age, $email){
-            $this->nom = $nom;
-            $this->prenom = $prenom;
-            $this->age = $age;
-            $this->email = $email;
-        }
-        
         /**
          * Retourne le nom du client
          * @return string
@@ -73,7 +66,7 @@
         }
         public function insert(){
             $database = new Database('clients');
-            $this->id = $database->insert([
+            $this->id_client = $database->insert([
                                     'nom'    => $this->nom,
                                     'prenom' => $this->prenom,
                                     'age'    => $this->age,
@@ -83,7 +76,13 @@
         }
 
         public static function getClients($where = null, $order = null, $limit = null){
-            return(new Database('clients'))->select($where, $order, $limit);
+            return(new Database('clients'))->select($where, $order, $limit)
+                                           ->fetchAll(PDO::FETCH_CLASS, self::class);
+        }
+
+        public static function getClient($id){
+            return(new Database('clients'))->select($id)
+                                           ->fetchObject(self::class);
         }
         
     }

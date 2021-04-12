@@ -24,8 +24,9 @@ a {
   text-decoration: none;
 }
 
-input {
+input, button {
   outline: none;
+  border: none;
 }
 
 .header {
@@ -36,5 +37,69 @@ input {
   text-align: center;
   color: #fff;
   line-height: 2.4;
+}
+
+.list-table {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-table table {
+  width: 80rem;
+}
+
+.list-table table thead {
+  background-color: #00614E;
+  color: #fff;
+}
+
+.list-table table thead th {
+  padding: 1rem .5rem;
+}
+
+.list-table table tbody td {
+  padding: 1rem .5rem;
+}
+
+.list-table table tbody td a {
+  color: #000;
+  text-align: center;
+}
+
+.list-table table tbody td:nth-of-type(1) {
+  text-align: center;
+}
+
+.list-table table tbody td .pen::before {
+  content: '';
+  display: block;
+  background-image: url(./asset/pen.svg);
+  background-size: 10px 10px;
+  height: 10px;
+  width: 10px;
+}
+
+.list-table table tbody tr:nth-of-type(odd) {
+  background-color: #dfe6e9;
+}
+
+.list-table a {
+  margin-top: 2rem;
+  padding: .3rem 1rem;
+}
+
+.list-table a button {
+  color: #fff;
+  background-color: #09599A;
+  padding: 1rem 2rem;
 }
 /*# sourceMappingURL=style.css.map */

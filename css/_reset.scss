@@ -22,10 +22,13 @@ a{
     text-decoration: none;
 }
 
-input{
+input, button{
     outline: none;
+    border: none;
 }
 
 $blue:#09599A;
 $green:#00614E;
-$red:#d63031; 
+$red:#d63031;
+$gray: rgb(223, 230, 233);
+
