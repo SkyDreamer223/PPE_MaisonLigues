@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 html {
   font-size: 62.5%;
 }
@@ -67,25 +67,29 @@ input, button {
 }
 
 .list-table table tbody td {
-  padding: 1rem .5rem;
+  padding: .8rem .5rem;
 }
 
 .list-table table tbody td a {
   color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.list-table table tbody td:nth-of-type(1), .list-table table tbody td:nth-of-type(4) {
   text-align: center;
 }
 
-.list-table table tbody td:nth-of-type(1) {
-  text-align: center;
+.list-table table tbody td .pen::after {
+  content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>');
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.list-table table tbody td .pen::before {
-  content: '';
-  display: block;
-  background-image: url(./asset/pen.svg);
-  background-size: 10px 10px;
-  height: 10px;
-  width: 10px;
+.list-table table tbody td .x::after {
+  content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>');
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .list-table table tbody tr:nth-of-type(odd) {
@@ -101,5 +105,102 @@ input, button {
   color: #fff;
   background-color: #09599A;
   padding: 1rem 2rem;
+}
+
+.section {
+  margin: 5rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.section a {
+  color: #00614E;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.section .form {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section .form label {
+  margin: .5rem 0;
+}
+
+.section .form input {
+  width: 50%;
+  padding: 1rem .5rem;
+  border: .2rem solid transparent;
+  border-bottom: 0.2rem solid #dfe6e9;
+  margin-bottom: .5rem;
+}
+
+.section .form input:focus {
+  width: 100%;
+  border: .2rem solid #000;
+}
+
+.section .form button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.8rem;
+  width: 20rem;
+  background-color: #00614E;
+  color: #fff;
+  padding: 1rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.section .form button svg {
+  margin-left: 7px;
+  margin-top: 2px;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: -3rem;
+  left: -1.5rem;
+  height: 5rem;
+  width: 5rem;
+  z-index: -1;
+  border-top: solid 0.25rem #00614E;
+  border-left: solid 0.25rem #00614E;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: -3rem;
+  right: -1.5rem;
+  height: 5rem;
+  width: 5rem;
+  z-index: -1;
+  border-bottom: solid 0.25rem #00614E;
+  border-right: solid 0.25rem #00614E;
 }
 /*# sourceMappingURL=style.css.map */

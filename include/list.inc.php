@@ -2,7 +2,7 @@
     $response = '';
     foreach($clients as $client){
         $response .='<tr>
-                        <td><a href="editer.php?id='.$client->id_client.'"><span class="pen"></span>Modifier ou <span class="x"></span>Supprimer</a></td>
+                        <td><a href="editer.php?id='.$client->id_client.'"><span class="pen"></span> Modifier ou <span class="x"></span> Supprimer</a></td>
                         <td>'.$client->nom.'</td>
                         <td>'.$client->prenom.'</td>
                         <td>'.$client->age.'</td>
