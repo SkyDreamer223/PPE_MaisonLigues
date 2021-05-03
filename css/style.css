@@ -203,4 +203,105 @@ input, button {
   border-bottom: solid 0.25rem #00614E;
   border-right: solid 0.25rem #00614E;
 }
+
+.section2 {
+  margin: 5rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.section2 a {
+  color: #00614E;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.section2 .form {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section2 .form label {
+  margin: .5rem 0;
+}
+
+.section2 .form input {
+  width: 50%;
+  padding: 1rem .5rem;
+  border: .2rem solid transparent;
+  border-bottom: 0.2rem solid #dfe6e9;
+  margin-bottom: .5rem;
+}
+
+.section2 .form input:focus {
+  width: 100%;
+  border: .2rem solid #000;
+}
+
+.section2 .form button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.8rem;
+  width: 20rem;
+  background-color: #00614E;
+  color: #fff;
+  padding: 1rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.section2 .form button svg {
+  margin-left: 7px;
+  margin-top: 2px;
+}
+
+.section2 .form button:last-child {
+  background-color: #d63031;
+}
+
+.section2::before {
+  content: '';
+  position: absolute;
+  top: -3rem;
+  left: -1.5rem;
+  height: 5rem;
+  width: 5rem;
+  z-index: -1;
+  border-top: solid 0.25rem #00614E;
+  border-left: solid 0.25rem #00614E;
+}
+
+.section2::after {
+  content: '';
+  position: absolute;
+  bottom: -3rem;
+  right: -1.5rem;
+  height: 5rem;
+  width: 5rem;
+  z-index: -1;
+  border-bottom: solid 0.25rem #00614E;
+  border-right: solid 0.25rem #00614E;
+}
 /*# sourceMappingURL=style.css.map */
