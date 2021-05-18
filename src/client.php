@@ -64,7 +64,7 @@
         /**
          * Change le mail du client
          *
-         * @param string $email
+         * @param string email
          * @return void
          */
         public function setMail($email){
@@ -101,18 +101,18 @@
          * @param string $id
          * @return void
          */
-        public function updateClient($id){
-            (new Database('clients'))->update([
+        public function updateClient(){
+            (new Database('clients'))->update('id_client = '.$this->id_client, [
                 'nom'    => $this->nom,
                 'prenom' => $this->prenom,
                 'age'    => $this->age,
                 'email'  => $this->email
-            ], $id);
+            ]);
         }
 
         
-        public function deleteClient($id){
-            (new Database('clients'))->delete($id);
+        public function deleteClient(){
+            (new Database('clients'))->delete('id_client = '.$this->id_client);
         }
         
     }

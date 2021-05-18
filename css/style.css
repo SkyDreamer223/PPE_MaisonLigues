@@ -29,6 +29,11 @@ input, button {
   border: none;
 }
 
+button {
+  cursor: pointer;
+  font-size: 0;
+}
+
 .header {
   background-color: #000;
 }
@@ -166,7 +171,7 @@ input, button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.8rem;
+  font-size: 0;
   width: 20rem;
   background-color: #00614E;
   color: #fff;
@@ -257,6 +262,7 @@ input, button {
 }
 
 .section2 .form button {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

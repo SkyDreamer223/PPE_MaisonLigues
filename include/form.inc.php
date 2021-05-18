@@ -1,4 +1,5 @@
 <main>
+    
     <section class="section">
         <a href="index.php">Voir la liste des Utilisateurs&gt;</a>
         <form class="form" method="post">

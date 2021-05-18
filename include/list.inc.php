@@ -9,8 +9,19 @@
                         <td>'.$client->email.'</td>
                     </tr>';
     }
+
+    if(isset($_GET['status'])){
+        if($_GET['status']=='update'){
+            print '<h2 class="update">Client mis à jour</h2>';
+        }
+        if($_GET['status']=='delete'){
+            print '<h2 class="delete">Client supprimé</h2>';
+        }
+    }
+    
 ?>
 <main>
+    
     <section class='list-table'>
         <table>
             <thead>
@@ -26,6 +37,6 @@
                 <?=$response?>
             </tbody>
         </table>
-        <a href="inscription.php"><button>+ Ajouter un client</button></a>
+        <a class="button" href="inscription.php">+ Ajouter un client</a>
     </section>
 </main>
